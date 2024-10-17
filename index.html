@@ -5,36 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Pessoal Interativo</title>
     <link rel="stylesheet" href="css/styles.css">
-<body>
-    <!--adicionando header para o logo-->
+</head>
+<body class="animate-down">
+    <!-- Header com logo e título -->
     <header>
         <div class="logo">
             <img class="imagemlogo" src="img/ban.png" alt="Logo portfólio">
             <h1>Portfólio Luis Carlos</h1>
         </div>
-        
     </header>
 
-    <!-- Seção Sobre Mim -->
-    <section id="Sobre-mim">
-        <button class="botao"><h2>Sobre-mim</h2></button>
-    </section>
+    <!-- Seção Sobre mim -->
+    <div class="secao" id="Sobre-mim">
+        <button class="botao" onclick="abrirModal('modalSobreMim')"><h2>Sobre mim</h2></button>
+    </div>
+
+    <!-- Modal "Sobre mim" -->
+    <div id="modalSobreMim" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalSobreMim')">&times;</span>
+            <h2>Sobre mim</h2>
+            <p>Olá! Meu nome é Luis Carlos e sou um desenvolvedor web. Tenho paixão por criar soluções que ajudem as pessoas no seu dia a dia. Sou formado em [sua área de formação] e tenho experiência em tecnologias como HTML, CSS e JavaScript.</p>
+            <p>Atualmente, estou me aprofundando em frameworks modernos como React e Node.js. Gosto de trabalhar em equipe e sempre estou buscando aprender algo novo. Nos meus momentos livres, gosto de [seus hobbies, como ler, praticar esportes ou tocar um instrumento].</p>
+        </div>
+    </div>
 
     <!-- Seção Habilidades -->
-    <section id="Habilidades">
+    <section class="secao" id="Habilidades">
         <button class="botao"><h2>Habilidades</h2></button>
     </section>
 
     <!-- Seção Projetos -->
-    <section id="Projetos">
+    <section class="secao" id="Projetos">
         <button class="botao"><h2>Projetos</h2></button>
     </section>
 
     <!-- Seção Contato -->
-    <section id="Contato">
-        <button class="botao"><h2>Contato</h2></button>
+    <section class="secao" id="Contato">
+        <button class="botao" onclick="abrirModal('modalContato')"><h2>Contato</h2></button>
     </section>
 
+    <!-- Modal "Contato" -->
+    <div id="modalContato" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalContato')">&times;</span>
+            <h2>Contatos</h2>
+            <p>Você pode me encontrar nas redes sociais abaixo:</p>
+            <div class="redes-sociais">
+                <a href="https://wa.me/+5511984514964" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 50px; height: 50px;">
+                </a>
+                <a href="https://www.linkedin.com/in/luis-carlos-4905ba227/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" style="width: 50px; height: 50px;">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
